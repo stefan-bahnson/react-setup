@@ -4,20 +4,21 @@ import { Provider } from 'react-redux'
 import { store } from './reducers/reducer'
 import { Router, Route, IndexRoute } from 'react-router'
 import App from './components/App'
-import Page01 from './components/Page01'
-import Page02 from './components/Page02'
+import Home from './components/Home'
+import Inbox from './components/Inbox'
 
+/*
+    Redux passes down state from our store to our components,
+    even if we use React Router in this case.
+ */
 ReactDOM.render(
     <Provider store={store}>
         <Router>
             <Route path="/" component={App}>
-                <IndexRoute component={Page01}/>
-                <Route path="/page01" component={Page01}/>
-                <Route path="/page02" component={Page02}/>
+                <IndexRoute component={Home}/>
+                <Route path="/inbox" component={Inbox}/>
             </Route>
         </Router>
     </Provider>,
     document.getElementById('app')
 );
-
-console.log(store.getState());

@@ -1,6 +1,15 @@
 
 /*
     ## Synchronous dispatch call ##
+
+    Redux will check all our reducers for the intended action
+    and update state accordingly.
+
+    If we don't use dispatch to emit our action in the previous step,
+    Redux has no way of knwing our intention.
+
+    Try calling the action without using dispatch and see what happens.
+    Spoiler! not much...
  */
 export function setState(text) {
     console.log('Dispatching action >> text: ' + text);
@@ -31,7 +40,10 @@ export function setState(text) {
  */
 export function setStateAsync(text) {
     return dispatch => {
-        setTimeout(() => dispatch(setState(text)), 3000)
+        setTimeout(() => {
+            console.log('State is on the way!');
+            dispatch(setState(text))
+        }, 3000)
     }
 }
 

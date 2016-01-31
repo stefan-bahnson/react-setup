@@ -7,7 +7,7 @@ const Inbox = (props) => {
     console.log(props.messages);
     return (
         <div>
-            <h3>Messages</h3>
+            <h4>Inbox</h4>
             <ul>
                 {/* conditional rendering */}
                 {

@@ -4,19 +4,18 @@
   "description": "React quickstart",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "node_modules/webpack-dev-server/bin/webpack-dev-server"
   },
   "author": "stefanbahnson@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.8.1",
-    "history": "^1.17.0",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
-    "react-redux": "^4.1.2",
     "react-router": "^1.0.3",
+    "history": "^1.17.0",
     "redux": "^3.1.5",
-    "redux-thunk": "^1.0.3"
+    "redux-thunk": "^1.0.3",
+    "react-redux": "^4.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",

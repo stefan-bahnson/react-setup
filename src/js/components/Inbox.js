@@ -8,15 +8,17 @@ const Inbox = (props) => {
     console.log(messages);
     return (
         <div className="Inbox">
-            <div className="Messages">
+            <div className="messages">
             <h1>Inbox</h1>
-            <ul>
                 {
                     messages.length ?
-                        messages.map( (msg,i) => <li key={i}>{msg.text}</li>)
-                        : 'no messages'
+                        messages.map( (msg,i) =>
+                            <div className="msg" key={i}>
+                                <i className="material-icons">mail</i>
+                                <div>{msg.text}</div>
+                            </div>)
+                            : <div>no messages</div>
                 }
-            </ul>
             </div>
         </div>
     )

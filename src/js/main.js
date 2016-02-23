@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { store } from './reducers/reducer'
-import { Router, Route, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import App from './components/App'
 import Home from './components/Home'
 import Inbox from './components/Inbox'
@@ -13,7 +13,7 @@ import Inbox from './components/Inbox'
  */
 ReactDOM.render(
     <Provider store={store}>
-        <Router>
+        <Router history={hashHistory}>
             <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
                 <Route path="/inbox" component={Inbox}/>

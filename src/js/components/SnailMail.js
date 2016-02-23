@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setStateAsync } from '../actions/message.actions'
+import { setStateAsync } from '../actions/actions'
 
 import InputBox from './InputBox'
 

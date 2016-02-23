@@ -21,21 +21,6 @@ function messages(state = [], action = {}) {
     }
 }
 
-
-/*
-    ## Without middleware ##
-    let store = createStore(messages);
-
-    You can also combine several reducers into the store:
-
-    const reducers = combineReducers({
-        messages,
-        ...
-    });
-
-    createStore(reducers);
- */
-
 let store = applyMiddleware(thunk)(createStore)(messages);
 
 export { store }

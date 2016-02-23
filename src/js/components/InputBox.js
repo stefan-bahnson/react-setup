@@ -3,7 +3,6 @@ import React from 'react'
 class InputBox extends React.Component {
     render() {
         const { handleClick } = this.props;
-        console.log(handleClick);
         return (
             <div className="InputBox">
                 <input

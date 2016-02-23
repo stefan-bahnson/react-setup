@@ -3,20 +3,17 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { store } from './reducers/reducer'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
-import App from './components/App'
-import Home from './components/Home'
-import Inbox from './components/Inbox'
 
-/*
-    Redux passes down state from our store to our components,
-    even if we use React Router in this case.
- */
+import App from './components/App'
+import InstaMail from './components/InstaMail'
+import SnailMail from './components/SnailMail'
+
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory}>
             <Route path="/" component={App}>
-                <IndexRoute component={Home}/>
-                <Route path="/inbox" component={Inbox}/>
+                <IndexRoute component={InstaMail}/>
+                <Route path="/snailmail" component={SnailMail}/>
             </Route>
         </Router>
     </Provider>,

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router'
 
 import Inbox from './Inbox'
+import Header from './Header'
+import Compose from './Compose'
 
 require('./_app.sass');
 
@@ -25,17 +26,3 @@ class App extends React.Component {
 }
 
 export default App
-
-const Header = () => (
-    <div className="Header">
-        <h1>React Setup</h1>
-        <Link to="/">InstaMail</Link>
-        <Link to="/snailmail">SnailMail</Link>
-    </div>
-);
-
-const Compose = (props) => (
-    <div className="Compose">
-        {props.children}
-    </div>
-);

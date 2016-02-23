@@ -7,11 +7,8 @@ class App extends React.Component {
       return (
           <div>
               <h1>React Setup</h1>
-              <p>by stefanbahnson@gmail.com</p>
-              <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/inbox'>Inbox</Link></li>
-              </ul>
+              <Link to='/'>Home</Link>
+              <Link to='/inbox'>Inbox</Link>
               {this.props.children}
           </div>
       )

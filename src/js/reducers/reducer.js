@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
-import DevTools from '../components/app/DevTools'
+import DevTools from '../components/DevTools'
 
 /*
     messages reducer
@@ -22,7 +22,7 @@ function messages(state = [], action = {}) {
     }
 }
 
-const store = createStore(reducers, {}, compose(
+const store = createStore(messages, {}, compose(
     applyMiddleware(thunk),
     DevTools.instrument()
 ));

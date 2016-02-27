@@ -1,12 +1,13 @@
 body
   margin: 0
-  color: #003b4f
+  color: #fff
   font-family: 'Open Sans', sans-serif
   overflow: hidden
 
 h1
   color: #e67e22
   margin: 0 10px 0 0
+  white-space: nowrap
 
 input[type=text]
   background-color: #2c3e50
@@ -19,7 +20,6 @@ input[type=text]
   display: flex
   i
     padding: 5px
-    color: white
     font-size: 2em
     cursor: pointer
     transition: all 200ms
@@ -42,7 +42,10 @@ input[type=text]
     &:hover
       background-color: white
       color: #3a3a3a
-
+  .created-by
+    width: 100%
+    label
+      float: right
 .Mail
   display: flex
   width: 100vw
@@ -58,8 +61,6 @@ input[type=text]
 .Inbox
   @extend .Compose
   background-color: #ecf0f1
-  li
-    color: #2c3e50
 
 .Info
   display: flex
@@ -81,7 +82,9 @@ input[type=text]
   display: inline-flex
   flex-direction: column
   width: 10em
+  color: #003b4f
 
 .msg
   display: flex
+
 

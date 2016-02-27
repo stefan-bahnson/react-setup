@@ -5,7 +5,7 @@ const Info = ({text, keyWord}) => (
         <i className="material-icons">info_outline</i>
         <div>
             <p>
-                Press <span className="keyword">{ keyWord }</span> or press the <span className="keyword">Button</span> to send a mail.
+                Press <span className="keyword">{ keyWord }</span> or the <span className="keyword">Button</span> to send a mail.
                 <br/>
                 { text }
             </p>

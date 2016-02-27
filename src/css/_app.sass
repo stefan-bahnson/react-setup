@@ -50,25 +50,16 @@ input[type=text]
 .Compose
   display: flex
   justify-content: center
+  align-items: center
   width: 50%
   height: 92.4vh
   background-color: #34495e
 
 .Inbox
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  width: 50%
-  height: 92.4vh
+  @extend .Compose
   background-color: #ecf0f1
   li
     color: #2c3e50
-
-.InstaMail
-  margin: 35% 0
-
-.SnailMail
-  margin: 35% 0
 
 .Info
   display: flex
@@ -90,7 +81,6 @@ input[type=text]
   display: inline-flex
   flex-direction: column
   width: 10em
-  min-height: 10em
 
 .msg
   display: flex

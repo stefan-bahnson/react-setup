@@ -1,3 +1,5 @@
+![Alt text](/SnailMail.JPG "SnailMail")
+
 # react-setup
 This project is meant to get you up and running without worring about the environment setup.  
 I've included an example app to help you get started so  

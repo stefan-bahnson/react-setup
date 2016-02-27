@@ -1,5 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
+import DevTools from '../components/app/DevTools'
 
 /*
     messages reducer
@@ -21,6 +22,9 @@ function messages(state = [], action = {}) {
     }
 }
 
-let store = applyMiddleware(thunk)(createStore)(messages);
+const store = createStore(reducers, {}, compose(
+    applyMiddleware(thunk),
+    DevTools.instrument()
+));
 
 export { store }

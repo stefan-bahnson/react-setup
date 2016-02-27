@@ -6,9 +6,16 @@ class InputBox extends React.Component {
         return (
             <div className="InputBox">
                 <input
-                    ref={ text => this._input = text}
+                    ref={ text => this._input = text }
                     type="text"
-                    placeholder="Send a message"/>
+                    placeholder="Send a message"
+                    onKeyPress={ (e) => {
+                            if (e.key === 'Enter') {
+                                handleClick(this._input.value);
+                                this._input.value = null;
+                            }
+                        }
+                    }/>
                 <i
                     className="material-icons"
                     onClick={() => {

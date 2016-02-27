@@ -4,7 +4,7 @@ import Inbox from './Inbox'
 import Header from './Header'
 import Compose from './Compose'
 
-require('./_app.sass');
+require('./../../css/_app.sass');
 
 class App extends React.Component {
 

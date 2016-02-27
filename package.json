@@ -22,6 +22,8 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
+    "redux-devtools-dock-monitor": "^1.1.0",
+    "redux-devtools-log-monitor": "^1.0.4",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   }

@@ -26,7 +26,7 @@ const Inbox = (props) => {
 
 function mapStateToProps(state){
     return {
-        messages: state
+        messages: state.messages
     }
 }
 

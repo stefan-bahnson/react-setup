@@ -22,7 +22,14 @@ function messages(state = [], action = {}) {
     }
 }
 
-const store = createStore(messages, {}, compose(
+/*
+    just keep adding reducers when needed
+ */
+const reducers = combineReducers({
+    messages
+});
+
+const store = createStore(reducers, {}, compose(
     applyMiddleware(thunk),
     DevTools.instrument()
 ));

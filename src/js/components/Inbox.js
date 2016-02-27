@@ -4,46 +4,32 @@ import {store } from '../reducers/reducer'
 
 const Inbox = (props) => {
 
-    console.log(props.messages);
+    let {messages} = props;
+    console.log(messages);
     return (
-        <div>
-            <h4>Inbox</h4>
-            <ul>
-                {/* conditional rendering */}
+        <div className="Inbox">
+            <div className="messages">
+            <h1>Inbox</h1>
                 {
-                    props.messages.length ?
-                        props.messages.map( (msg,i) => <li key={i}>{msg.text}</li>)
-                        : 'no messages'
+                    messages.length ?
+                        messages.map( (msg,i) =>
+                            <div className="msg" key={i}>
+                                <i className="material-icons">mail</i>
+                                <div>{msg.text}</div>
+                            </div>)
+                            : <div>no messages</div>
                 }
-            </ul>
+            </div>
         </div>
     )
 };
 
-/*
-    Mapping what state this component is interested in
-    and then passing it as an arg to the connect function.
-
-    The messages name has nothing to do with the reducer.
-    You could rename it if you want.
-
-    { texts: state }
-
-    Just remember to change the references in your components if you do.
- */
 function mapStateToProps(state){
     return {
-        messages: state
+        messages: state.messages
     }
 }
 
-/*
-    ## Subscribe to the Store ##
-
-    We're passing the state we want this component to subscribe to.
-    If we don't tell Redux what state to track,
-    the component will not update when state changes.
- */
 export default connect(
     mapStateToProps
 )(Inbox)

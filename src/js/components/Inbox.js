@@ -1,30 +1,46 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {store } from '../reducers/reducer'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
-const Inbox = (props) => {
+class Inbox extends React.Component {
 
-    let {messages} = props;
-    console.log(messages);
-    return (
-        <div className="Inbox">
-            <div className="messages">
-            <h1>Inbox</h1>
-                {
-                    messages.length ?
-                        messages.map( (msg,i) =>
-                            <div className="msg" key={i}>
-                                <i className="material-icons">mail</i>
-                                <div>{msg.text}</div>
-                            </div>)
-                            : <div>no messages</div>
-                }
+    render() {
+        const { messages } = this.props;
+        console.log(messages);
+        return (
+            <div className="Inbox">
+                <div className="messages">
+                    <h1>Inbox</h1>
+                    <ReactCSSTransitionGroup
+                        transitionName="example"
+                        transitionAppear={true}
+                        transitionAppearTimeout={1000}
+                        transitionEnterTimeout={1000}
+                        transitionLeaveTimeout={1000}>
+                        {
+                            messages.length ?
+                                messages.map((msg, i) =>
+                                    <div className="msg" key={ 'a' + i} >
+                                    {msg.pos}
+                                        <i className="material-icons" key={'b' + i}>mail</i>
+
+                                        <div key={ 'c' + i}>{msg.text}</div>
+                                    </div>)
+                                :
+                                <div key={ 'asd'}>
+                                    no messages
+                                </div>
+                        }
+                    </ReactCSSTransitionGroup>
+                </div>
             </div>
-        </div>
-    )
-};
+        )
+    }
 
-function mapStateToProps(state){
+}
+
+function mapStateToProps(state) {
     return {
         messages: state.messages
     }

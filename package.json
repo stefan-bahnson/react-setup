@@ -4,7 +4,7 @@
   "description": "React quickstart",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors"
+    "start": "webpack-dev-server"
   },
   "author": "stefanbahnson@gmail.com",
   "license": "ISC",
@@ -32,6 +32,7 @@
     "redux-devtools-dock-monitor": "^1.1.0",
     "redux-devtools-log-monitor": "^1.0.4",
     "sass-loader": "^3.1.2",
-    "style-loader": "^0.13.0"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14"
   }
 }

@@ -16,7 +16,7 @@ Install webpack and dev tools https://webpack.github.io/docs/installation.html
 
 ### Getting Started
 Go to the project root and type the following command in the command line to install dependencies: `npm install`  
-When done, type `npm start` and open a web-browser at <http://localhost:3333/>  
+When done, type `npm start` and open a web-browser at <http://localhost:3000/>  
 
 # Inbox Example App
 The included example is a basic app that illustrates how `React`, `Redux` and `React Router` work together.  

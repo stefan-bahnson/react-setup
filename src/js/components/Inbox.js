@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {store } from '../reducers/reducer'
+import {store } from '../redux/reducers/message.reducer.js'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class Inbox extends React.Component {
@@ -43,7 +43,7 @@ class Inbox extends React.Component {
 function mapStateToProps(state) {
     return {
         messages: state.messages
-    }
+    };
 }
 
 export default connect(

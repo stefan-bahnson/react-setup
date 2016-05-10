@@ -4,7 +4,7 @@
   "description": "React quickstart",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors"
   },
   "author": "stefanbahnson@gmail.com",
   "license": "ISC",

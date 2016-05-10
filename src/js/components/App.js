@@ -5,7 +5,7 @@ import Header from './Header'
 import Compose from './Compose'
 import DevTools from './DevTools'
 
-require('./../../css/_app.sass');
+require('./../../sass/main.scss');
 
 class App extends React.Component {
 

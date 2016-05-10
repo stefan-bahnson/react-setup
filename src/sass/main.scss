@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  color: #e67e22;
+  margin: 0 10px 0 0;
+  white-space: nowrap;
+}
+
+input[type=text] {
+  background-color: #2c3e50;
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+.InputBox {
+  display: flex;
+
+  i {
+    padding: 5px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: all 200ms;
+    &:hover {
+      color: #f7ffb0;
+      transform: translateX(4px);
+    }
+  }
+}
+
+.Header {
+  display: flex;
+  height: 4.5em;
+  line-height: 4.5em;
+  padding: 0 10px;
+  background-color: #2c3e50;
+
+  a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: white;
+    font-weight: bold;
+    transition: all 200ms;
+    &:hover {
+      background-color: white;
+      color: #3a3a3a;;
+    }
+
+    .created-by {
+      width: 100%;
+
+      label {
+        float: right;
+      }
+    }
+  }
+}
+
+.Mail {
+  display: flex;
+  width: 100vw;
+}
+
+.Compose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 92.4vh;
+  background-color: #34495e;
+}
+
+.Inbox {
+  @extend .Compose;
+  background-color: #ecf0f1;
+}
+
+.Info {
+  display: flex;
+  align-items: center;
+  color: #c9c9cb;
+
+  i {
+    font-size: 2em;
+    margin-right: 0.3em;
+    color: #fff;
+  }
+
+  .keyword {
+    Background-color: #f7ffb0;
+    color: #e67e22;
+    padding: 0 5px;
+    font-weight: bold;
+  }
+}
+
+.messages {
+  display: inline-flex;
+  flex-direction: column;
+  width: 10em;
+  color: #003b4f;
+}
+
+.msg {
+  display: flex;
+}
+
+.new {
+  background-color: #0086b3;
+  animation: fade 200ms;
+}
+
+.example-enter {
+  height: 0;
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  height: 24px;
+  transition: all 200ms ease-in-out;
+}
+.example-leave {
+  opacity: 1;
+  height: 24px;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  height: 0;
+  animation: fade 200ms;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.test-enter {
+  height: 0;
+  color: red;
+  opacity: 0.01;
+}
+
+.test-enter.test-enter-active {
+  opacity: 1;
+  color: blue;
+  height: 24px;
+  transition: all 200ms ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

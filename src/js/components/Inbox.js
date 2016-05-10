@@ -7,7 +7,7 @@ class Inbox extends React.Component {
 
     render() {
         const { messages } = this.props;
-        console.log(messages);
+        console.log('Messages', messages);
         return (
             <div className="Inbox">
                 <div className="messages">
@@ -21,14 +21,14 @@ class Inbox extends React.Component {
                         {
                             messages.length ?
                                 messages.map((msg, i) =>
-                                    <div className="msg" key={ 'a' + i} >
+                                    <div className="msg" key={'a' + i} >
                                     {msg.pos}
-                                        <i className="material-icons" key={'b' + i}>mail</i>
+                                        <i className="material-icons">mail</i>
 
-                                        <div key={ 'c' + i}>{msg.text}</div>
+                                        <div>{msg.text}</div>
                                     </div>)
                                 :
-                                <div key={ 'asd'}>
+                                <div key={ 'noMsg'}>
                                     no messages
                                 </div>
                         }

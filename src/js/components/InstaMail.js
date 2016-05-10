@@ -11,7 +11,6 @@ const instructions = "The message will arrive instantly.";
 class InstaMail extends React.Component {
   render() {
     const { setState } = this.props;
-    console.log(this.props);
     return (
       <div className="InstaMail">
         <h1>InstaMail</h1>

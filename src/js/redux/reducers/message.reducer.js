@@ -1,7 +1,7 @@
 export default function messages(state = [], action = {}) {
   switch (action.type) {
     case 'SET_STATE':
-      console.log(action);
+      console.log('Reducer', action);
       // returns previousState + nextState as the new state
       return [
         ...state,

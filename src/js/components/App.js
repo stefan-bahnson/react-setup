@@ -5,12 +5,11 @@ import Header from './Header'
 import Compose from './Compose'
 import DevTools from './DevTools'
 
-require('./../../sass/main.scss');
+import './../../sass/main.scss';
 
 class App extends React.Component {
 
     render() {
-        const {messages} = this.props;
         return (
             <div>
                 <DevTools />

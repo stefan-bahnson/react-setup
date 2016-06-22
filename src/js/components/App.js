@@ -1,42 +1,55 @@
 import React from 'react';
-import {connect} from 'react-redux';
-
-import Growl from './Growl';
-import Inbox from './Inbox';
-import Header from './Header';
-import Compose from './Compose';
 import DevTools from './DevTools';
-
-import './../../sass/main.scss';
+import '../../sass/main.scss';
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: props.header
+    }
+  }
+
   render() {
-    const {growl} = this.props;
+    const {header, text, items} = this.props;
     return (
       <div>
-        <DevTools />
-        {
-          growl.show ?
-            <Growl time={3}/>
-            : null
-        }
-        <Header />
-        <div className="Mail">
-          <Compose>
-            {this.props.children}
-          </Compose>
-          <Inbox />
-        </div>
+        <h1 onClick={() => this.handleClick()}>{this.state.title}</h1>
+        <input id="inp" type="text" onChange={(event) => this.handleClick(event)}/>
+        <Texts items={items}/>
+        {console.log(this.props)}
+        <Example />
       </div>
     )
   }
-}
 
-function mapStateToProps(state) {
-  return {
-    growl: state.growl
+  handleClick(e) {
+
+    this.setState({
+      title: e.target.value
+    });
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default App;
+
+const Texts = ({items}) => (
+  <div>
+    {
+      items.map((item, i) => (
+        <div key={i}>{item.text}</div>
+      ))
+    }
+  </div>
+);
+
+const Example = () => {
+  return (
+    <div onClick={() => doSomething()}>click me</div>
+  );
+
+  function doSomething() {
+    console.log('do something');
+  }
+};

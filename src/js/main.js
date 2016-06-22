@@ -1,21 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { store } from './store/store'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import {Provider} from 'react-redux'
+import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 
 import App from './components/App'
-import InstaMail from './components/InstaMail'
-import SnailMail from './components/SnailMail'
+
+
+const items = [
+  { text: 'text1'},
+  { text: 'text2'},
+  { text: 'text3'},
+  { text: 'text4'},
+];
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Router history={hashHistory}>
-            <Route path="/" component={App}>
-                <IndexRoute component={InstaMail}/>
-                <Route path="/snailmail" component={SnailMail}/>
-            </Route>
-        </Router>
-    </Provider>,
-    document.getElementById('app')
+  <App text="eidel" header="title text" items={items}/>,
+  document.getElementById('app')
 );
+

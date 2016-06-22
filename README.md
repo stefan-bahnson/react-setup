@@ -12,7 +12,6 @@ can be removed from the `index.html`.
 
 ### Requirements
 Install node.js https://nodejs.org/en/download/  
-Install webpack and dev tools https://webpack.github.io/docs/installation.html  
 
 ### Getting Started
 Go to the project root and type the following command in the command line to install dependencies: `npm install`  

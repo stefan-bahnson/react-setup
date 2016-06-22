@@ -6,9 +6,7 @@ const Header = () => (
         <h1>React Setup</h1>
         <Link to="/">InstaMail</Link>
         <Link to="/snailmail">SnailMail</Link>
-        <div className="created-by">
-            <label>created by <b>stefan.bahnson@gmail.com</b></label>
-        </div>
+        <div className="createdBy"> created by <b>stefan.bahnson@gmail.com</b></div>
     </div>
 );
 

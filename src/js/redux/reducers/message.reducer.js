@@ -1,8 +1,6 @@
 export default function messages(state = [], action = {}) {
   switch (action.type) {
     case 'SET_STATE':
-      console.log('Reducer', action);
-      // returns previousState + nextState as the new state
       return [
         ...state,
         {
@@ -11,7 +9,6 @@ export default function messages(state = [], action = {}) {
         }
       ];
     default:
-      // if no action type is matched we return the current state
       return state;
   }
 }

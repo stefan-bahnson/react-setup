@@ -167,3 +167,16 @@ input[type=text] {
     opacity: 0;
   }
 }
+
+.growlContainer {
+  position: fixed;
+  background-color: greenyellow;
+  width: 100%;
+  text-align: center;
+
+  div {
+    padding: 26px;
+    color: black;
+    font-weight: 700;
+  }
+}

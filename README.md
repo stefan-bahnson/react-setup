@@ -7,8 +7,9 @@ dive in and start creating!
 
 ### What you get
 Full stack setup with `React`, `Redux`, `Redux DevTools`, `Thunk Middleware`, `React Router` and `Sass`.  
-I've also included [Material Icons](https://design.google.com/icons/) which is used in the example but
-can be removed from the `index.html`.
+I've also included:  
+- [Material Icons](https://design.google.com/icons/) which is used in the example but can be removed from the <b>index.html</b>  
+- [eslint](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) with the airbnb config which can be run with the command `npm lint`.
 
 ### Requirements
 Install node.js https://nodejs.org/en/download/  

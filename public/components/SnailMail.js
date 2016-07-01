@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setStateAsync} from '../redux/actions/message.actions';
-import {showGrowl} from '../redux/actions/growl.actions';
+import {setStateAsync} from '../actions/message.actions';
+import {showGrowl} from '../actions/growl.actions';
 
 import InputBox from './InputBox'
 import Info from './Info'

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {showGrowl} from '../redux/actions/growl.actions';
+import {showGrowl} from '../actions/growl.actions';
 
 
 class Growl extends Component {

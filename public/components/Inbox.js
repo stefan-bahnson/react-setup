@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {store} from '../redux/reducers/message.reducer.js'
+import {store} from '../reducers/message.reducer.js'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class Inbox extends React.Component {

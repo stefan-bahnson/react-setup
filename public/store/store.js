@@ -2,8 +2,8 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
 import DevTools from '../components/DevTools'
 
-import messages from '../redux/reducers/message.reducer';
-import growl from '../redux/reducers/growl.reducer';
+import messages from '../reducers/message.reducer';
+import growl from '../reducers/growl.reducer';
 
 /*
   inital state for messages

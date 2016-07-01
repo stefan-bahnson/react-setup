@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { store } from './store/store'
+import { store } from './public/store/store'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
-import App from './components/App'
-import InstaMail from './components/InstaMail'
-import SnailMail from './components/SnailMail'
+import App from './public/components/App'
+import InstaMail from './public/components/InstaMail'
+import SnailMail from './public/components/SnailMail'
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { setState } from '../redux/actions/message.actions';
+import { setState } from '../actions/message.actions';
 
 import InputBox from './InputBox';
 import Info from './Info';

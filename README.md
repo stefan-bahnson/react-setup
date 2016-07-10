@@ -1,3 +1,15 @@
+# Big update on the way
+- Enzymejs(airbnb) testing utils and wallabyjs live test runner.  
+- Linting based on the airbnb rules with eslint.  
+- Dev and prod configs for webpack.
+- Project restructuring for a more maintainable setup.  
+- Examples using real http requests with Axios.
+- A simple express REST API for the requests.  
+
+There will be a clean version of the repo and one with the example app included for those still learning.  
+You can expect this update during july.  
+Stay tuned!
+
 ![Alt text](/SnailMail.JPG "SnailMail")
 
 # react-setup
